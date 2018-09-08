@@ -1,4 +1,4 @@
-﻿# 如何在Docker中运行普通.net core 命令行程序？
+# 如何在Docker中运行普通.net core 命令行程序？
 VS2017截至到15.8.3，仍然无法直接将.net core 命令行程序直接打包到docker镜像中。（难道微软程序员只用.net core写web吗？）  
 
 随便新建一个.net core web(docker)项目，项目路径下会生成一个Dockerfile文件，如下：
@@ -47,6 +47,7 @@ ENTRYPOINT ["dotnet", "HelloWorld.dll"]
 ```
 docker build .
 ```
+即可在本地得到生成的镜像。
 
 # 运行本文示例
 本文示例docker镜像地址 [点我](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker/)
