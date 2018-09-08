@@ -1,7 +1,7 @@
-# ÈçºÎÔÚDockerÖÐÔËÐÐÆÕÍ¨.net core ÃüÁîÐÐ³ÌÐò£¿
-VS2017½ØÖÁµ½15.8.3£¬ÈÔÈ»ÎÞ·¨Ö±½Ó½«.net core ÃüÁîÐÐ³ÌÐòÖ±½Ó´ò°üµ½docker¾µÏñÖÐ¡££¨ÄÑµÀÎ¢Èí³ÌÐòÔ±Ö»ÓÃ.net coreÐ´webÂð£¿£©  
+ï»¿# å¦‚ä½•åœ¨Dockerä¸­è¿è¡Œæ™®é€š.net core å‘½ä»¤è¡Œç¨‹åºï¼Ÿ
+VS2017æˆªè‡³åˆ°15.8.3ï¼Œä»ç„¶æ— æ³•ç›´æŽ¥å°†.net core å‘½ä»¤è¡Œç¨‹åºç›´æŽ¥æ‰“åŒ…åˆ°dockeré•œåƒä¸­ã€‚ï¼ˆéš¾é“å¾®è½¯ç¨‹åºå‘˜åªç”¨.net coreå†™webå—ï¼Ÿï¼‰  
 
-Ëæ±ãÐÂ½¨Ò»¸ö.net core web(docker)ÏîÄ¿£¬ÏîÄ¿Â·¾¶ÏÂ»áÉú³ÉÒ»¸öDockerfileÎÄ¼þ£¬ÈçÏÂ£º
+éšä¾¿æ–°å»ºä¸€ä¸ª.net core web(docker)é¡¹ç›®ï¼Œé¡¹ç›®è·¯å¾„ä¸‹ä¼šç”Ÿæˆä¸€ä¸ªDockerfileæ–‡ä»¶ï¼Œå¦‚ä¸‹ï¼š
 ```
 FROM microsoft/aspnetcore:2.0 AS base
 WORKDIR /app
@@ -23,9 +23,9 @@ WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "WebApplicationHelloWorld.dll"]
 ```
-¿ÉÒÔ¿´µ½webÏîÄ¿ÊÇÓÃdotnetÃüÁî±àÒëÉú³ÉµÄ¡£
-ÔËÐÐ`dotnet restore --help`¡¢`dotnet build --help`ºÍ`dotnet publish --help`²é¿´Ïà¹ØÃüÁîÓÃ·¨¡£
-ÎÒÃÇµÄÃüÁîÐÐ³ÌÐòÒ²¿ÉÒÔÓÃdotnetÃüÁîÉú³É·¢²¼£º
+å¯ä»¥çœ‹åˆ°webé¡¹ç›®æ˜¯ç”¨dotnetå‘½ä»¤ç¼–è¯‘ç”Ÿæˆçš„ã€‚
+è¿è¡Œ`dotnet restore --help`ã€`dotnet build --help`å’Œ`dotnet publish --help`æŸ¥çœ‹ç›¸å…³å‘½ä»¤ç”¨æ³•ã€‚
+æˆ‘ä»¬çš„å‘½ä»¤è¡Œç¨‹åºä¹Ÿå¯ä»¥ç”¨dotnetå‘½ä»¤ç”Ÿæˆå‘å¸ƒï¼š
 ```
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
@@ -39,18 +39,19 @@ WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["dotnet", "HelloWorld.dll"]
 ```
-ÕâÀïÊ¹ÓÃÁËmicrosoft/dotnet:2.1-sdk ×÷Îª±àÒë»·¾³£¬microsoft/dotnet:2.1-runtime×÷ÎªÔËÐÐ»·¾³¡£ÕâÑù´ò°üºó¾µÏñÌå»ý»á¸üÐ¡¡£  
-Èç¹ûÐèÒª½øÒ»²½¾«¼ò¾µÏñ£¬´ó¼Ò¿ÉÒÔ½øÒ»²½É¾³ý/appÖÐµÄÎÞ¹ØÎÄ¼þ¡£
+è¿™é‡Œä½¿ç”¨äº†microsoft/dotnet:2.1-sdk ä½œä¸ºç¼–è¯‘çŽ¯å¢ƒï¼Œmicrosoft/dotnet:2.1-runtimeä½œä¸ºè¿è¡ŒçŽ¯å¢ƒã€‚è¿™æ ·æ‰“åŒ…åŽé•œåƒä½“ç§¯ä¼šæ›´å°ã€‚  
+å¦‚æžœéœ€è¦è¿›ä¸€æ­¥ç²¾ç®€é•œåƒï¼Œå¤§å®¶å¯ä»¥è¿›ä¸€æ­¥åˆ é™¤/appä¸­çš„æ— å…³æ–‡ä»¶ã€‚
 
-# ±àÒëÊ¾Àý
-ÃüÁîÌáÊ¾·û»òPower ShellÏÂ½øÈë½â¾ö·½°¸ÎÄ¼þ¼Ð£¬ÊäÈë£º
+# ç¼–è¯‘ç¤ºä¾‹
+å‘½ä»¤æç¤ºç¬¦æˆ–Power Shellä¸‹è¿›å…¥è§£å†³æ–¹æ¡ˆæ–‡ä»¶å¤¹ï¼Œè¾“å…¥ï¼š
 ```
 docker build .
 ```
 
-# ÔËÐÐ±¾ÎÄÊ¾Àý
+# è¿è¡Œæœ¬æ–‡ç¤ºä¾‹
+æœ¬æ–‡ç¤ºä¾‹dockeré•œåƒåœ°å€ [ç‚¹æˆ‘](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker/)
 ```
 docker run --rm sanjusss/dotnet-helloworldwithdocker
 ```
-ÃüÁîÌáÊ¾·ûÏÂ»áÏÔÊ¾
+å‘½ä»¤æç¤ºç¬¦ä¸‹ä¼šæ˜¾ç¤º
 >Hello World!
