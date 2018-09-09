@@ -1,3 +1,10 @@
+[![Docker Build Status](https://img.shields.io/docker/build/sanjusss/dotnet-helloworldwithdocker.svg)](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker)
+[![GitHub issues](https://img.shields.io/github/issues/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/issues)
+[![GitHub forks](https://img.shields.io/github/forks/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/network)
+[![GitHub stars](https://img.shields.io/github/stars/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/stargazers)
+[![GitHub license](https://img.shields.io/github/license/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/LICENSE)
+
+
 # 如何在Docker中运行普通.net core 命令行程序？
 VS2017截至到15.8.3，仍然无法直接将.net core 命令行程序直接打包到docker镜像中。（难道微软程序员只用.net core写web吗？）  
 
