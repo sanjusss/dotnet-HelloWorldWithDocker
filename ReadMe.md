@@ -1,3 +1,4 @@
+[![Docker Automated build](https://img.shields.io/docker/automated/sanjusss/dotnet-helloworldwithdocker.svg)](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker)
 [![Docker Build Status](https://img.shields.io/docker/build/sanjusss/dotnet-helloworldwithdocker.svg)](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker)
 [![GitHub issues](https://img.shields.io/github/issues/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/issues)
 [![GitHub forks](https://img.shields.io/github/forks/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/network)
