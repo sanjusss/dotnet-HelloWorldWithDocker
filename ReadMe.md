@@ -3,7 +3,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/issues)
 [![GitHub forks](https://img.shields.io/github/forks/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/network)
 [![GitHub stars](https://img.shields.io/github/stars/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/stargazers)
-[![GitHub license](https://img.shields.io/github/license/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/blob/master/LICENSE)
 
 
 # 如何在Docker中运行普通.net core 命令行程序？
