@@ -1,3 +1,4 @@
+﻿
 [![Docker Automated build](https://img.shields.io/docker/automated/sanjusss/dotnet-helloworldwithdocker.svg)](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker)
 [![Docker Build Status](https://img.shields.io/docker/build/sanjusss/dotnet-helloworldwithdocker.svg)](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker)
 [![GitHub issues](https://img.shields.io/github/issues/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/issues)
@@ -36,6 +37,7 @@ ENTRYPOINT ["dotnet", "WebApplicationHelloWorld.dll"]
 我们的命令行程序也可以用dotnet命令生成发布：
 ```
 FROM microsoft/dotnet:2.1-sdk AS build
+MAINTAINER sanjusss <sanjusss@qq.com>
 WORKDIR /src
 COPY . /src
 #RUN dotnet restore 
@@ -43,6 +45,7 @@ COPY . /src
 RUN dotnet publish -c Release -o /app
 
 FROM microsoft/dotnet:2.1-runtime AS final
+MAINTAINER sanjusss <sanjusss@qq.com>
 WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["dotnet", "HelloWorld.dll"]

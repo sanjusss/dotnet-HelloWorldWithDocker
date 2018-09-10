@@ -1,4 +1,5 @@
-FROM microsoft/dotnet:2.1-sdk AS build
+﻿FROM microsoft/dotnet:2.1-sdk AS build
+MAINTAINER sanjusss <sanjusss@qq.com>
 WORKDIR /src
 COPY . /src
 #RUN dotnet restore 
@@ -6,6 +7,7 @@ COPY . /src
 RUN dotnet publish -c Release -o /app
 
 FROM microsoft/dotnet:2.1-runtime AS final
+MAINTAINER sanjusss <sanjusss@qq.com>
 WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["dotnet", "HelloWorld.dll"]
