@@ -1,13 +1,13 @@
-[![Docker Automated build](https://img.shields.io/docker/automated/sanjusss/dotnet-helloworldwithdocker.svg)](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker)
-[![Docker Build Status](https://img.shields.io/docker/build/sanjusss/dotnet-helloworldwithdocker.svg)](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker)
+﻿
+[![Build status](https://ci.appveyor.com/api/projects/status/y9t5gcbh8gq98gw5?svg=true)](https://ci.appveyor.com/project/sanjusss/dotnet-HelloWorldWithDocker)
+[![](https://img.shields.io/docker/stars/sanjusss/dotnet-helloworldwithdocker.svg?logo=docker)](https://hub.docker.com/r/sanjusss/dotnet-helloworldwithdocker)
 [![GitHub issues](https://img.shields.io/github/issues/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/issues)
 [![GitHub forks](https://img.shields.io/github/forks/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/network)
 [![GitHub stars](https://img.shields.io/github/stars/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/stargazers)
 [![GitHub license](https://img.shields.io/github/license/sanjusss/dotnet-HelloWorldWithDocker.svg)](https://github.com/sanjusss/dotnet-HelloWorldWithDocker/blob/master/LICENSE)
 
 
-# 如何在Docker中运行普通.net core 命令行程序？
-VS2017截至到15.8.3，仍然无法直接将.net core 命令行程序直接打包到docker镜像中。（难道微软程序员只用.net core写web吗？）  
+# 如何在Docker中运行普通.net core 命令行程序？  
 
 随便新建一个.net core web(docker)项目，项目路径下会生成一个Dockerfile文件，如下：
 ```

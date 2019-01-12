@@ -7,10 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1795AC33-93BA-4A66-8AAC-3135CE479D2A}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		build.ps1 = build.ps1
+		deploy.ps1 = deploy.ps1
 		Dockerfile = Dockerfile
 		LICENSE = LICENSE
 		ReadMe.md = ReadMe.md
 	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2AAF3AAC-A564-4BC7-8B42-A184C3989F80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +27,10 @@ Global
 		{75590CFC-7912-4C9A-9461-6B7562A3FA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75590CFC-7912-4C9A-9461-6B7562A3FA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75590CFC-7912-4C9A-9461-6B7562A3FA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AAF3AAC-A564-4BC7-8B42-A184C3989F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAF3AAC-A564-4BC7-8B42-A184C3989F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAF3AAC-A564-4BC7-8B42-A184C3989F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAF3AAC-A564-4BC7-8B42-A184C3989F80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

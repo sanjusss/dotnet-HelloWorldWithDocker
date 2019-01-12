@@ -1,0 +1,24 @@
+﻿
+version: 1.0.0-{build}
+pull_requests:
+    do_not_increment_build_number: true
+shallow_clone: true
+image:
+    - Ubuntu1804
+services:
+    - docker
+environment:
+    DOCKER_USER:
+        secure: Nr7bDvSp07T3WIg3X3l5jg==
+    DOCKER_PASS:
+        secure: hOx6eh/5WYE/05s/mtOUZqGLifWzRGMToqJaZ7+EUuQ=
+    matrix:
+        - ARCH: arm32v7
+        - ARCH: arm64v8
+        - ARCH: amd64
+
+build_script:
+    - pwsh: ./build.ps1
+
+deploy_script:
+    - pwsh: ./deploy.ps1
