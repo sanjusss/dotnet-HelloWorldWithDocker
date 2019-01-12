@@ -2,7 +2,7 @@
 ARG runtime=microsoft/dotnet:3.0-runtime
 ARG version=0
 
-FROM sdk=microsoft/dotnet:3.0-sdk AS build
+FROM microsoft/dotnet:3.0-sdk AS build
 MAINTAINER sanjusss <sanjusss@qq.com>
 WORKDIR /src
 COPY . /src
