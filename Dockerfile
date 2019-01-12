@@ -8,7 +8,7 @@ WORKDIR /src
 COPY . /src
 RUN dotnet publish -c Release -o /app --version-suffix=$version ./HelloWorld/HelloWorld.csproj
 
-FROM $runtime AS final
+FROM microsoft/dotnet:$runtime AS final
 MAINTAINER sanjusss <sanjusss@qq.com>
 WORKDIR /app
 COPY --from=build /app .
