@@ -18,14 +18,14 @@ $auth64 = [Convert]::ToBase64String($auth)
 "@ | Out-File -Encoding Ascii ~/.docker/config.json
 
 
-docker tag helloworld:${env:ARCH} sanjusss/dotnet-helloworldwithdocker:${env:ARCH}
-docker push sanjusss/dotnet-helloworldwithdocker:${env:ARCH}
+docker tag local_image:${env:ARCH} ${env:REMOTE_IMAGE}:${env:ARCH}
+docker push ${env:REMOTE_IMAGE}:${env:ARCH}
 
 if ($env:ARCH -eq "amd64") {
     # The last in the build matrix
-    docker -D manifest create "sanjusss/dotnet-helloworldwithdocker:latest" `
-        "sanjusss/dotnet-helloworldwithdocker:arm32v7" `
-        "sanjusss/dotnet-helloworldwithdocker:arm64v8" `
-        "sanjusss/dotnet-helloworldwithdocker:amd64"
-    docker manifest push "sanjusss/dotnet-helloworldwithdocker:latest"
+    docker -D manifest create "$($env:REMOTE_IMAGE):latest" `
+        "$($env:REMOTE_IMAGE):arm32v7" `
+        "$($env:REMOTE_IMAGE):arm64v8" `
+        "$($env:REMOTE_IMAGE):amd64"
+    docker manifest push "$($env:REMOTE_IMAGE):latest"
 }

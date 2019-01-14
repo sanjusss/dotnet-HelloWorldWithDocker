@@ -12,6 +12,7 @@ environment:
         secure: Nr7bDvSp07T3WIg3X3l5jg==
     DOCKER_PASS:
         secure: hOx6eh/5WYE/05s/mtOUZqGLifWzRGMToqJaZ7+EUuQ=
+    REMOTE_IMAGE: sanjusss/dotnet-helloworldwithdocker
     matrix:
         - ARCH: arm32v7
         - ARCH: arm64v8
