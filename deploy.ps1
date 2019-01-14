@@ -40,6 +40,6 @@ if (($env:ARCH -eq "amd64") -and (-not $isWindows)) {
             "$($env:REMOTE_IMAGE):$($env:APPVEYOR_REPO_TAG_NAME)-linux-arm64v8" `
             "$($env:REMOTE_IMAGE):$($env:APPVEYOR_REPO_TAG_NAME)-linux-amd64" `
             "$($env:REMOTE_IMAGE):$($env:APPVEYOR_REPO_TAG_NAME)-windows-amd64"
-        docker manifest push "$($env:REMOTE_IMAGE):latest"
+        docker manifest push "$($env:REMOTE_IMAGE):$($env:APPVEYOR_REPO_TAG_NAME)"
     }
 }
