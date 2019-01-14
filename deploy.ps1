@@ -17,15 +17,16 @@ $auth64 = [Convert]::ToBase64String($auth)
 }
 "@ | Out-File -Encoding Ascii ~/.docker/config.json
 
-
-docker tag local_image:${env:ARCH} ${env:REMOTE_IMAGE}:${env:ARCH}
-docker push ${env:REMOTE_IMAGE}:${env:ARCH}
+$os = If ($isWindows) {"windows"} Else {"linux"}
+docker tag local_image:$os-${env:ARCH} ${env:REMOTE_IMAGE}:$os-${env:ARCH}
+docker push ${env:REMOTE_IMAGE}:$os-${env:ARCH}
 
 if ($env:ARCH -eq "amd64") {
     # The last in the build matrix
     docker -D manifest create "$($env:REMOTE_IMAGE):latest" `
-        "$($env:REMOTE_IMAGE):arm32v7" `
-        "$($env:REMOTE_IMAGE):arm64v8" `
-        "$($env:REMOTE_IMAGE):amd64"
+        "$($env:REMOTE_IMAGE):linux-arm32v7" `
+        "$($env:REMOTE_IMAGE):linux-arm64v8" `
+        "$($env:REMOTE_IMAGE):linux-amd64" `
+        "$($env:REMOTE_IMAGE):windows-amd64"
     docker manifest push "$($env:REMOTE_IMAGE):latest"
 }
