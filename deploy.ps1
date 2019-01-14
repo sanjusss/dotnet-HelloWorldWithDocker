@@ -21,7 +21,7 @@ $os = If ($isWindows) {"windows"} Else {"linux"}
 docker tag local_image:$os-${env:ARCH} ${env:REMOTE_IMAGE}:$os-${env:ARCH}
 docker push ${env:REMOTE_IMAGE}:$os-${env:ARCH}
 
-if ($env:ARCH -eq "amd64") {
+if (($env:ARCH -eq "amd64") -and (-not $isWindows)) {
     # The last in the build matrix
     docker -D manifest create "$($env:REMOTE_IMAGE):latest" `
         "$($env:REMOTE_IMAGE):linux-arm32v7" `
